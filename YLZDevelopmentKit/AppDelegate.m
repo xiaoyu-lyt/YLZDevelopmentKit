@@ -3,10 +3,11 @@
 //  YLZDevelopmentKit
 //
 //  Created by 萧宇 on 07/03/2017.
-//  Copyright © 2017 萧宇. All rights reserved.
+//  Copyright © 2017 ylzinfo. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "MainViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    MainViewController *myViewController = [[MainViewController alloc] init];
+    self.window.rootViewController = myViewController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		680F6875248CEE05BB3CB158 /* Pods_YLZDevelopmentKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB13C4B08CE6121D347DD52 /* Pods_YLZDevelopmentKit.framework */; };
+		B83A15311E6E9C7E00DFA42E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A15301E6E9C7E00DFA42E /* MainViewController.m */; };
+		B83A15381E6E9CD100DFA42E /* YLZBaseApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A15371E6E9CD100DFA42E /* YLZBaseApiManager.m */; };
 		B89DC1541E6E5CBD00C5D69F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B89DC1531E6E5CBD00C5D69F /* main.m */; };
 		B89DC1571E6E5CBD00C5D69F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B89DC1561E6E5CBD00C5D69F /* AppDelegate.m */; };
-		B89DC15A1E6E5CBD00C5D69F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B89DC1591E6E5CBD00C5D69F /* ViewController.m */; };
-		B89DC15D1E6E5CBD00C5D69F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B89DC15B1E6E5CBD00C5D69F /* Main.storyboard */; };
 		B89DC15F1E6E5CBD00C5D69F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B89DC15E1E6E5CBD00C5D69F /* Assets.xcassets */; };
 		B89DC1621E6E5CBD00C5D69F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B89DC1601E6E5CBD00C5D69F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -20,13 +20,16 @@
 		3881BB0012418F791DBC538F /* Pods-YLZDevelopmentKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YLZDevelopmentKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-YLZDevelopmentKit/Pods-YLZDevelopmentKit.release.xcconfig"; sourceTree = "<group>"; };
 		475472B1BF09D7197B848EC6 /* Pods-YLZDevelopmentKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YLZDevelopmentKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YLZDevelopmentKit/Pods-YLZDevelopmentKit.debug.xcconfig"; sourceTree = "<group>"; };
 		8AB13C4B08CE6121D347DD52 /* Pods_YLZDevelopmentKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YLZDevelopmentKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B83A152F1E6E9C7E00DFA42E /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		B83A15301E6E9C7E00DFA42E /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		B83A15341E6E9CB000DFA42E /* YLZDevelopmentKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLZDevelopmentKit.h; sourceTree = "<group>"; };
+		B83A15351E6E9CBD00DFA42E /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
+		B83A15361E6E9CD100DFA42E /* YLZBaseApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLZBaseApiManager.h; sourceTree = "<group>"; };
+		B83A15371E6E9CD100DFA42E /* YLZBaseApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLZBaseApiManager.m; sourceTree = "<group>"; };
 		B89DC14F1E6E5CBD00C5D69F /* YLZDevelopmentKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLZDevelopmentKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89DC1531E6E5CBD00C5D69F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B89DC1551E6E5CBD00C5D69F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B89DC1561E6E5CBD00C5D69F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B89DC1581E6E5CBD00C5D69F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B89DC1591E6E5CBD00C5D69F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		B89DC15C1E6E5CBD00C5D69F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B89DC15E1E6E5CBD00C5D69F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B89DC1611E6E5CBD00C5D69F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B89DC1631E6E5CBD00C5D69F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +64,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B83A15321E6E9CA400DFA42E /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				B83A15341E6E9CB000DFA42E /* YLZDevelopmentKit.h */,
+				B83A15331E6E9CA400DFA42E /* Networking */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		B83A15331E6E9CA400DFA42E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B83A15351E6E9CBD00DFA42E /* Networking.h */,
+				B83A15361E6E9CD100DFA42E /* YLZBaseApiManager.h */,
+				B83A15371E6E9CD100DFA42E /* YLZBaseApiManager.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		B89DC1461E6E5CBD00C5D69F = {
 			isa = PBXGroup;
 			children = (
@@ -82,11 +104,11 @@
 		B89DC1511E6E5CBD00C5D69F /* YLZDevelopmentKit */ = {
 			isa = PBXGroup;
 			children = (
+				B83A15321E6E9CA400DFA42E /* SDK */,
 				B89DC1551E6E5CBD00C5D69F /* AppDelegate.h */,
 				B89DC1561E6E5CBD00C5D69F /* AppDelegate.m */,
-				B89DC1581E6E5CBD00C5D69F /* ViewController.h */,
-				B89DC1591E6E5CBD00C5D69F /* ViewController.m */,
-				B89DC15B1E6E5CBD00C5D69F /* Main.storyboard */,
+				B83A152F1E6E9C7E00DFA42E /* MainViewController.h */,
+				B83A15301E6E9C7E00DFA42E /* MainViewController.m */,
 				B89DC15E1E6E5CBD00C5D69F /* Assets.xcassets */,
 				B89DC1601E6E5CBD00C5D69F /* LaunchScreen.storyboard */,
 				B89DC1631E6E5CBD00C5D69F /* Info.plist */,
@@ -167,7 +189,6 @@
 			files = (
 				B89DC1621E6E5CBD00C5D69F /* LaunchScreen.storyboard in Resources */,
 				B89DC15F1E6E5CBD00C5D69F /* Assets.xcassets in Resources */,
-				B89DC15D1E6E5CBD00C5D69F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,8 +247,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B89DC15A1E6E5CBD00C5D69F /* ViewController.m in Sources */,
 				B89DC1571E6E5CBD00C5D69F /* AppDelegate.m in Sources */,
+				B83A15381E6E9CD100DFA42E /* YLZBaseApiManager.m in Sources */,
+				B83A15311E6E9C7E00DFA42E /* MainViewController.m in Sources */,
 				B89DC1541E6E5CBD00C5D69F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,14 +257,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B89DC15B1E6E5CBD00C5D69F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B89DC15C1E6E5CBD00C5D69F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B89DC1601E6E5CBD00C5D69F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -387,6 +401,7 @@
 				B89DC1681E6E5CBD00C5D69F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
