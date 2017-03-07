@@ -1,0 +1,6 @@
+framework module Pods_YLZDevelopmentKit {
+  umbrella header "Pods-YLZDevelopmentKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
