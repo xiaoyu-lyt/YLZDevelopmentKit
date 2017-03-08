@@ -11,10 +11,10 @@
 /**
  请求方法枚举值
 
- - HTTPMethodGet: Get请求
- - HTTPMethodPost: Post请求
- - HTTPMethodPut: Put请求
- - HTTPMethodDelete: Delete请求
+ - HTTPMethodGet:       Get请求
+ - HTTPMethodPost:      Post请求
+ - HTTPMethodPut:       Put请求
+ - HTTPMethodDelete:    Delete请求
  */
 typedef NS_ENUM(NSUInteger, HTTPMethod) {
     HTTPMethodGet       = 0,
@@ -47,9 +47,9 @@ typedef NS_ENUM(NSUInteger, HTTPMethod) {
 @end
 
 /**
- 网络请求manager基类，实际项目中各请求的manager均继承自该基类
+ 网络请求 manager 基类，实际项目中各请求的 manager 均继承自该基类
  */
-@interface YLZBaseApiManager : NSObject<NSCopying, NSMutableCopying>
+@interface YLZBaseApiManager : NSObject <NSCopying, NSMutableCopying>
 
 /* 回调函数代理，请求完成时通过该代理调用相应方法 */
 @property (nonatomic, weak, nullable) id <RequestCompletionDelegate> delegate;
@@ -64,9 +64,9 @@ typedef NS_ENUM(NSUInteger, HTTPMethod) {
 /**
  网络请求方法，所有的网络请求将在这里面进行封装
 
- @param url API地址
- @param method 请求方法
- @param params 请求参数
+ @param url     API地址
+ @param method  请求方法
+ @param params  请求参数
  */
 - (void)requestApi:(NSString * _Nonnull)url method:(HTTPMethod)method params:(NSDictionary * _Nullable)params;
 

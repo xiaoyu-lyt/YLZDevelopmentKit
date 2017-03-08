@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "YLZDevelopmentKit.h"
 #import "LoginApiManager.h"
+#import "YLZAppContext.h"
 
 @interface MainViewController ()<RequestCompletionDelegate>
 
@@ -19,13 +20,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    YLZBaseApiManager *manager1 = [YLZBaseApiManager sharedManager];
-    YLZBaseApiManager *manager2 = [LoginApiManager sharedManager];
-    YLZBaseApiManager *manager3 = [[YLZBaseApiManager alloc] init];
-    YLZBaseApiManager *manager4 = [manager3 mutableCopy];
-    NSLog(@"%@\n%@\n%@\n%@", manager1, manager2, manager3, manager4);
-    
 }
 
 - (void)didReceiveMemoryWarning {
