@@ -8,8 +8,11 @@
 
 #import "YLZBaseApiManager.h"
 #import <AFNetworking/AFNetworking.h>
+#import <CocoaSPDY/SPDYProtocol.h>
 
-@implementation YLZBaseApiManager
+@implementation YLZBaseApiManager {
+    AFHTTPSessionManager *_manager;
+}
 
 #pragma mark - Singleton
 
@@ -23,6 +26,12 @@
     if (!self) {
         return nil;
     }
+    
+    /* 配置SPDY */
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    configuration.protocolClasses = @[[SPDYURLSessionProtocol class]];
+    _manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://api.github.com"] sessionConfiguration:configuration];
+    
     return self;
 }
 

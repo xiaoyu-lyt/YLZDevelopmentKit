@@ -14,6 +14,7 @@
 		B89DC1571E6E5CBD00C5D69F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B89DC1561E6E5CBD00C5D69F /* AppDelegate.m */; };
 		B89DC15F1E6E5CBD00C5D69F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B89DC15E1E6E5CBD00C5D69F /* Assets.xcassets */; };
 		B89DC1621E6E5CBD00C5D69F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B89DC1601E6E5CBD00C5D69F /* LaunchScreen.storyboard */; };
+		B8D854DE1E6F991800BF279C /* LoginApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D854DD1E6F991800BF279C /* LoginApiManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		B89DC15E1E6E5CBD00C5D69F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B89DC1611E6E5CBD00C5D69F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B89DC1631E6E5CBD00C5D69F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8D854DC1E6F991800BF279C /* LoginApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginApiManager.h; sourceTree = "<group>"; };
+		B8D854DD1E6F991800BF279C /* LoginApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginApiManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 				B89DC1561E6E5CBD00C5D69F /* AppDelegate.m */,
 				B83A152F1E6E9C7E00DFA42E /* MainViewController.h */,
 				B83A15301E6E9C7E00DFA42E /* MainViewController.m */,
+				B8D854DC1E6F991800BF279C /* LoginApiManager.h */,
+				B8D854DD1E6F991800BF279C /* LoginApiManager.m */,
 				B89DC15E1E6E5CBD00C5D69F /* Assets.xcassets */,
 				B89DC1601E6E5CBD00C5D69F /* LaunchScreen.storyboard */,
 				B89DC1631E6E5CBD00C5D69F /* Info.plist */,
@@ -251,6 +256,7 @@
 				B83A15381E6E9CD100DFA42E /* YLZBaseApiManager.m in Sources */,
 				B83A15311E6E9C7E00DFA42E /* MainViewController.m in Sources */,
 				B89DC1541E6E5CBD00C5D69F /* main.m in Sources */,
+				B8D854DE1E6F991800BF279C /* LoginApiManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +367,7 @@
 			baseConfigurationReference = 475472B1BF09D7197B848EC6 /* Pods-YLZDevelopmentKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				DEVELOPMENT_TEAM = 72D43W87FJ;
 				INFOPLIST_FILE = YLZDevelopmentKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -374,6 +381,7 @@
 			baseConfigurationReference = 3881BB0012418F791DBC538F /* Pods-YLZDevelopmentKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				DEVELOPMENT_TEAM = 72D43W87FJ;
 				INFOPLIST_FILE = YLZDevelopmentKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
