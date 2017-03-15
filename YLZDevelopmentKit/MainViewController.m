@@ -8,10 +8,8 @@
 
 #import "MainViewController.h"
 #import "YLZDevelopmentKit.h"
-#import "LoginApiManager.h"
-#import "YLZAppContext.h"
 
-@interface MainViewController ()<RequestCompletionDelegate>
+@interface MainViewController ()
 
 @end
 
@@ -20,6 +18,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    if ([YLZNetworkManager sharedManager].currentNetworkStatus == YLZNetworkStatusWiFi) {
+        NSLog(@"当前处于WiFi网络");
+    }
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,13 +37,31 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Request Completion Delegate
-- (void)requestDidSuccessWithResponseObject:(id)responseObject {
-    NSLog(@"success:%@", responseObject);
-}
-
-- (void)requestDidFailureWithError:(NSError *)error {
-    NSLog(@"failure:%ld", (long)error.code);
+- (void)reachabilityChanged:(NSNotification *)notification {
+    YLZNetworkReachability *curReach = [notification object];
+    YLZNetworkStatus netStatus = [curReach currentReachabilityStatus];
+    switch (netStatus) {
+        case YLZNetworkStatusNotReachable:
+            NSLog(@"网络不可用");
+            break;
+        case YLZNetworkStatusUnknown:
+            NSLog(@"未知网络");
+            break;
+        case YLZNetworkStatusWWAN2G:
+            NSLog(@"2G网络");
+            break;
+        case YLZNetworkStatusWWAN3G:
+            NSLog(@"3G网络");
+            break;
+        case YLZNetworkStatusWWAN4G:
+            NSLog(@"4G网络");
+            break;
+        case YLZNetworkStatusWiFi:
+            NSLog(@"WiFi网络");
+            break;
+        default:
+            break;
+    }
 }
 
 @end

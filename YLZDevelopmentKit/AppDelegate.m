@@ -8,8 +8,11 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "YLZNetworkManager.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic) YLZNetworkReachability *reachability;
 
 @end
 
@@ -18,6 +21,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    /* 监听网络状态，必须经过这三步配置才能成功监听 */
+//    YLZNetworkReachability *reachability = [YLZNetworkReachability reachabilityWithHostName:@"www.baidu.com"];
+//    YLZNetworkReachability *reachability = [YLZNetworkReachability reachabilityForInternetConnection];
+//    self.reachability = reachability;
+//    [YLZBaseApiManager sharedManager].currentNetworkStatus = reachability.currentReachabilityStatus;
+//    [reachability startNotifier];
+    [[YLZNetworkManager sharedManager] startMonitoringReachability];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     MainViewController *myViewController = [[MainViewController alloc] init];

@@ -13,6 +13,7 @@
 #ifndef Networking_h
 #define Networking_h
 
-#import "YLZBaseApiManager.h"
+#import "YLZNetworkManager.h"
+#import "YLZAppContext.h"
 
 #endif /* Networking_h */

@@ -1,24 +1,25 @@
 //
-//  YLZBaseApiManager.m
+//  YLZNetworkManager.m
 //  YLZDevelopmentKit
 //
-//  Created by 萧宇 on 07/03/2017.
+//  Created by 萧宇 on 15/03/2017.
 //  Copyright © 2017 ylzinfo. All rights reserved.
 //
 
-#import "YLZBaseApiManager.h"
+#import "YLZNetworkManager.h"
 #import <AFNetworking/AFNetworking.h>
 #import <CocoaSPDY/SPDYProtocol.h>
 
-@implementation YLZBaseApiManager {
+@implementation YLZNetworkManager {
     AFHTTPSessionManager *_manager;
+    YLZNetworkReachability *_reachability;
 }
 
 #pragma mark - Singleton
 
 /**
  初始化方法
-
+ 
  @return self
  */
 - (instancetype)init {
@@ -37,11 +38,11 @@
 
 /**
  使用 GCD 实现单例模式
-
+ 
  @return sharedManager
  */
-+ (YLZBaseApiManager *)sharedManager {
-    static YLZBaseApiManager *sharedManager = nil;
++ (YLZNetworkManager *)sharedManager {
+    static YLZNetworkManager *sharedManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedManager = [[super allocWithZone:NULL] init];
@@ -50,8 +51,8 @@
 }
 
 /**
- override allocWithZone: 方法，确保使用 [YLZBaseApiManager alloc] 得到的是 sharedManager
-
+ override allocWithZone: 方法，确保使用 [YLZNetworkManager alloc] 得到的是 sharedManager
+ 
  @param zone zone
  @return sharedManager
  */
@@ -61,7 +62,7 @@
 
 /**
  override copyWithZone: 方法，确保使用 [manager copy] 得到的是 sharedManager
-
+ 
  @param zone zone
  @return sharedManager
  */
@@ -71,7 +72,7 @@
 
 /**
  override mutableCopyWithZone: 方法，确保使用 [manager mutableCopy] 得到的是 sharedManager
-
+ 
  @param zone zone
  @return sharedManager
  */
@@ -81,8 +82,18 @@
 
 #pragma mark - Public method
 
-- (void)requestApi:(NSString *)url method:(HTTPMethod)method params:(NSDictionary *)params {
+- (void)startMonitoringReachability {
+    /* 配置网络状态类 */
+    YLZNetworkReachability *reachability = [YLZNetworkReachability reachabilityForInternetConnection];
+    _reachability = reachability;
+    self.currentNetworkStatus = reachability.currentReachabilityStatus;
+    [reachability startNotifier];
     
+    /* 设置网络状态变换通知回调 */
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kNetworkReachabilityChangedNotification object:nil];
+}
+
+- (void)requestApi:(NSString *)url method:(HTTPMethod)method params:(NSDictionary *)params {
     /* 检查回调代理是否设置 */
     if (!self.delegate) {
         NSLog(@"未设置回调代理！");
@@ -128,7 +139,40 @@
             NSLog(@"请设置正确的请求方法！");
             break;
     }
-    
+}
+
+#pragma mark - Call back method
+
+/**
+ 网络状态变换通知回调
+ 
+ @param notification 通知
+ */
+- (void)reachabilityChanged:(NSNotification *)notification {
+    YLZNetworkReachability *currentReachability = [notification object];
+    self.currentNetworkStatus = [currentReachability currentReachabilityStatus];
+    switch (self.currentNetworkStatus) {
+        case YLZNetworkStatusNotReachable:
+            NSLog(@"网络不可用");
+            break;
+        case YLZNetworkStatusUnknown:
+            NSLog(@"未知网络");
+            break;
+        case YLZNetworkStatusWWAN2G:
+            NSLog(@"2G网络");
+            break;
+        case YLZNetworkStatusWWAN3G:
+            NSLog(@"3G网络");
+            break;
+        case YLZNetworkStatusWWAN4G:
+            NSLog(@"4G网络");
+            break;
+        case YLZNetworkStatusWiFi:
+            NSLog(@"WiFi网络");
+            break;
+        default:
+            break;
+    }
 }
 
 @end

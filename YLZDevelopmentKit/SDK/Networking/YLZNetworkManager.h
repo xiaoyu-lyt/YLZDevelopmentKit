@@ -1,16 +1,17 @@
 //
-//  YLZBaseApiManager.h
+//  YLZNetworkManager.h
 //  YLZDevelopmentKit
 //
-//  Created by 萧宇 on 07/03/2017.
+//  Created by 萧宇 on 15/03/2017.
 //  Copyright © 2017 ylzinfo. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import "YLZNetworkReachability.h"
 
 /**
  请求方法枚举值
-
+ 
  - HTTPMethodGet:       Get请求
  - HTTPMethodPost:      Post请求
  - HTTPMethodPut:       Put请求
@@ -32,14 +33,14 @@ typedef NS_ENUM(NSUInteger, HTTPMethod) {
 
 /**
  网络请求成功后的回调方法
-
+ 
  @param responseObject 服务器返回的数据
  */
 - (void)requestDidSuccessWithResponseObject:(id _Nullable)responseObject;
 
 /**
  网络请求失败后的回调方法
-
+ 
  @param error 错误信息
  */
 - (void)requestDidFailureWithError:(NSError * _Nullable)error;
@@ -47,23 +48,30 @@ typedef NS_ENUM(NSUInteger, HTTPMethod) {
 @end
 
 /**
- 网络请求 manager 基类，实际项目中各请求的 manager 均继承自该基类
+ 网络相关 manager 类，封装各类网络相关操作
  */
-@interface YLZBaseApiManager : NSObject <NSCopying, NSMutableCopying>
+@interface YLZNetworkManager : NSObject <NSCopying, NSMutableCopying>
 
 /* 回调函数代理，请求完成时通过该代理调用相应方法 */
 @property (nonatomic, weak, nullable) id <RequestCompletionDelegate> delegate;
+/* 当前网络状态 */
+@property (nonatomic, assign) YLZNetworkStatus currentNetworkStatus;
 
 /**
- api manager 单例
-
+ network manager 单例
+ 
  @return manager 单例
  */
-+ (YLZBaseApiManager * _Nonnull)sharedManager;
++ (YLZNetworkManager * _Nonnull)sharedManager;
+
+/**
+ 开始监听网络状态
+ */
+- (void)startMonitoringReachability;
 
 /**
  网络请求方法，所有的网络请求将在这里面进行封装
-
+ 
  @param url     API地址
  @param method  请求方法
  @param params  请求参数

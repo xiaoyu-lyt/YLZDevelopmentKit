@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		680F6875248CEE05BB3CB158 /* Pods_YLZDevelopmentKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB13C4B08CE6121D347DD52 /* Pods_YLZDevelopmentKit.framework */; };
 		B83A15311E6E9C7E00DFA42E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A15301E6E9C7E00DFA42E /* MainViewController.m */; };
-		B83A15381E6E9CD100DFA42E /* YLZBaseApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A15371E6E9CD100DFA42E /* YLZBaseApiManager.m */; };
+		B896FE7F1E78D2ED001A5086 /* YLZNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B896FE7E1E78D2ED001A5086 /* YLZNetworkManager.m */; };
 		B89DC1541E6E5CBD00C5D69F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B89DC1531E6E5CBD00C5D69F /* main.m */; };
 		B89DC1571E6E5CBD00C5D69F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B89DC1561E6E5CBD00C5D69F /* AppDelegate.m */; };
 		B89DC15F1E6E5CBD00C5D69F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B89DC15E1E6E5CBD00C5D69F /* Assets.xcassets */; };
 		B89DC1621E6E5CBD00C5D69F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B89DC1601E6E5CBD00C5D69F /* LaunchScreen.storyboard */; };
-		B8D854DE1E6F991800BF279C /* LoginApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D854DD1E6F991800BF279C /* LoginApiManager.m */; };
 		B8D854E51E6FAC4900BF279C /* YLZAppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D854E41E6FAC4900BF279C /* YLZAppContext.m */; };
+		B8E2EEB81E6FFEF100D3791F /* YLZNetworkReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E2EEB71E6FFEF100D3791F /* YLZNetworkReachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +26,8 @@
 		B83A15301E6E9C7E00DFA42E /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		B83A15341E6E9CB000DFA42E /* YLZDevelopmentKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLZDevelopmentKit.h; sourceTree = "<group>"; };
 		B83A15351E6E9CBD00DFA42E /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
-		B83A15361E6E9CD100DFA42E /* YLZBaseApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLZBaseApiManager.h; sourceTree = "<group>"; };
-		B83A15371E6E9CD100DFA42E /* YLZBaseApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLZBaseApiManager.m; sourceTree = "<group>"; };
+		B896FE7D1E78D2ED001A5086 /* YLZNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLZNetworkManager.h; sourceTree = "<group>"; };
+		B896FE7E1E78D2ED001A5086 /* YLZNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLZNetworkManager.m; sourceTree = "<group>"; };
 		B89DC14F1E6E5CBD00C5D69F /* YLZDevelopmentKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLZDevelopmentKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89DC1531E6E5CBD00C5D69F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B89DC1551E6E5CBD00C5D69F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -35,10 +35,10 @@
 		B89DC15E1E6E5CBD00C5D69F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B89DC1611E6E5CBD00C5D69F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B89DC1631E6E5CBD00C5D69F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B8D854DC1E6F991800BF279C /* LoginApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginApiManager.h; sourceTree = "<group>"; };
-		B8D854DD1E6F991800BF279C /* LoginApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginApiManager.m; sourceTree = "<group>"; };
 		B8D854E31E6FAC4900BF279C /* YLZAppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLZAppContext.h; sourceTree = "<group>"; };
 		B8D854E41E6FAC4900BF279C /* YLZAppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLZAppContext.m; sourceTree = "<group>"; };
+		B8E2EEB61E6FFEF100D3791F /* YLZNetworkReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLZNetworkReachability.h; sourceTree = "<group>"; };
+		B8E2EEB71E6FFEF100D3791F /* YLZNetworkReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLZNetworkReachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +84,10 @@
 			isa = PBXGroup;
 			children = (
 				B83A15351E6E9CBD00DFA42E /* Networking.h */,
-				B83A15361E6E9CD100DFA42E /* YLZBaseApiManager.h */,
-				B83A15371E6E9CD100DFA42E /* YLZBaseApiManager.m */,
+				B896FE7D1E78D2ED001A5086 /* YLZNetworkManager.h */,
+				B896FE7E1E78D2ED001A5086 /* YLZNetworkManager.m */,
+				B8E2EEB61E6FFEF100D3791F /* YLZNetworkReachability.h */,
+				B8E2EEB71E6FFEF100D3791F /* YLZNetworkReachability.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -116,8 +118,6 @@
 				B89DC1561E6E5CBD00C5D69F /* AppDelegate.m */,
 				B83A152F1E6E9C7E00DFA42E /* MainViewController.h */,
 				B83A15301E6E9C7E00DFA42E /* MainViewController.m */,
-				B8D854DC1E6F991800BF279C /* LoginApiManager.h */,
-				B8D854DD1E6F991800BF279C /* LoginApiManager.m */,
 				B89DC15E1E6E5CBD00C5D69F /* Assets.xcassets */,
 				B89DC1601E6E5CBD00C5D69F /* LaunchScreen.storyboard */,
 				B89DC1631E6E5CBD00C5D69F /* Info.plist */,
@@ -265,12 +265,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8E2EEB81E6FFEF100D3791F /* YLZNetworkReachability.m in Sources */,
 				B89DC1571E6E5CBD00C5D69F /* AppDelegate.m in Sources */,
-				B83A15381E6E9CD100DFA42E /* YLZBaseApiManager.m in Sources */,
+				B896FE7F1E78D2ED001A5086 /* YLZNetworkManager.m in Sources */,
 				B8D854E51E6FAC4900BF279C /* YLZAppContext.m in Sources */,
 				B83A15311E6E9C7E00DFA42E /* MainViewController.m in Sources */,
 				B89DC1541E6E5CBD00C5D69F /* main.m in Sources */,
-				B8D854DE1E6F991800BF279C /* LoginApiManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
