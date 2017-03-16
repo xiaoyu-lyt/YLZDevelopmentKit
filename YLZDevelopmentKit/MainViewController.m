@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "YLZDevelopmentKit.h"
+#import "YLZDNSMappingManager.h"
 
 @interface MainViewController ()
 
@@ -19,8 +20,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    if ([YLZNetworkManager sharedManager].currentNetworkStatus == YLZNetworkStatusWiFi) {
-        NSLog(@"当前处于WiFi网络");
+    NSString *ip = [[YLZDNSMappingManager sharedManager] resolvedUrl:@"https://api.daniellam.cn/ego/v1/user"];
+    if (ip) {
+        NSLog(@"%@", ip);
     }
 }
 

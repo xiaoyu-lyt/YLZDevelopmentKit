@@ -32,14 +32,6 @@ extern NSString *kNetworkReachabilityChangedNotification;
 
 /**
  网络状态类，监听当前设备的网络状态并通知 NotificationCenter
- 
- 要使用网络状态监听功能需经过一下几步配置
- 1、在 AppDelegate 中增加一个实例变量 reachability;
- 2、在 application:didFinishLaunchingWithOptions: 中做如下配置
-    YLZNetworkReachability *reachability = [YLZNetworkReachability reachabilityWithHostName:@"www.baidu.com"]; // 或其他可行网址
-    self.reachability = reachability;
-    [reachability startNotifier];
- 3、在需要监听网络状态的页面添加 NotificationCenter 的 Observer 并设置响应方法
  */
 @interface YLZNetworkReachability : NSObject
 

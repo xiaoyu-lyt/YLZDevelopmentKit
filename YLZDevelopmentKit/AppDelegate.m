@@ -22,17 +22,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    /* 监听网络状态，必须经过这三步配置才能成功监听 */
-//    YLZNetworkReachability *reachability = [YLZNetworkReachability reachabilityWithHostName:@"www.baidu.com"];
-//    YLZNetworkReachability *reachability = [YLZNetworkReachability reachabilityForInternetConnection];
-//    self.reachability = reachability;
-//    [YLZBaseApiManager sharedManager].currentNetworkStatus = reachability.currentReachabilityStatus;
-//    [reachability startNotifier];
+    /* 监听网络状态 */
     [[YLZNetworkManager sharedManager] startMonitoringReachability];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    MainViewController *myViewController = [[MainViewController alloc] init];
-    self.window.rootViewController = myViewController;
+    self.window.rootViewController = [[MainViewController alloc] init];
     [self.window makeKeyAndVisible];
     
     return YES;
