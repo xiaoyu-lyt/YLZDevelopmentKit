@@ -86,6 +86,9 @@
         return originalUrl;
     }
     
+    NSLog(@"%@", _dnsMappingDictionary);
+    return nil;
+    
     /* 遍历当前映射，如匹配成功则返回解析后的 URL，否则返回原始 URL */
     for (NSString *key in _dnsMappingDictionary.allKeys) {
         if ([domain isEqualToString:key]) {
